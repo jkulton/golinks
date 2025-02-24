@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>golinks / import</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width">
+    <script src="./import.js"></script>
+  </head>
+  <body>
+    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
+      <section class="flex items-center mb-3 w-full">
+        <a href="/pages/index.html" class="flex items-center decoration-none">
+          <img src="../images/icon.svg" width="36"/>
+          <h1 class="font-black text-black ml-2 mr-2 font-19">golinks</h1>
+        </a>
+        <p class="text-gray-200">/ import</p>
+      </section>
+
+      <hr />
+
+      <p class="w-full m-0 mb-3 text-left">Import golinks from csv. For each line, the first value should be the name of the link, and the second value should be the url.</p>
+
+      <section class="w-full">
+        <form class="w-full">
+          <textarea name="imports" placeholder="cf,https://dash.cloudflare.com
+gh,https://github.com
+http,https://httpstatuses.io"></textarea>
+          <section class="w-full flex mt-2 items-center">
+            <a href="/pages/index.html" class="ml-auto text-black mr-3">Cancel</a>
+            <input type="submit" class="button ml-2" value="Import" />
+          </section>
+        </form>
+      </section>
+    </section>
+  </body>
+</html>

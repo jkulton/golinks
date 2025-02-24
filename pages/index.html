@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>golinks</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
+      <section class="flex items-center mb-3 w-full">
+        <a href="/pages/index.html" class="flex items-center decoration-none">
+          <img src="../images/icon.svg" width="36"/>
+          <h1 class="font-black text-black ml-2 mr-2 font-19">golinks</h1>
+        </a>
+        <p class="text-gray-200">/ manage</p>
+      </section>
+      <hr />
+      <section class="flex w-full mb-3">
+        <a href="/pages/create.html" class="button">Create</a>
+        <section class="ml-auto">
+          <a href="/pages/import.html" class="button ml-1 mr-1">Import</a>
+          or
+          <a href="/pages/export.html" class="button ml-1 mr-1">Export</a>
+          as csv
+        </section>
+      </section>
+      <table class="golink-table w-full">
+        <tr>
+          <th class="font-normal text-gray-200">Name</th>
+          <th class="font-normal text-gray-200">URL</th>
+          <th class="font-normal text-gray-200">Actions</th>
+        </tr>
+        <tbody></tbody>
+      </table>
+      <section class="golink-table--footer flex items-center mt-3 pl-3 pr-3 w-full"></section>
+    </section>
+    <div class="site-footer mt-4 mb-4 text-center"></div>
+  </body>
+</html>

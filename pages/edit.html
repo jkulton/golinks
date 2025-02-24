@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>golinks / edit</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width">
+    <script src="./edit.js"></script>
+  </head>
+  <body>
+    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
+      <section class="flex items-center mb-3 w-full">
+        <a href="/pages/index.html" class="flex items-center decoration-none">
+          <img src="../images/icon.svg" width="36"/>
+          <h1 class="font-black text-black ml-2 mr-2 font-19">golinks</h1>
+        </a>
+        <p class="text-gray-200">/ edit</p>
+      </section>
+      <hr />
+      <section class="w-full flex flex-center">
+        <form id="create-edit" class="w-full">
+          <section class="w-full">
+            <section class="text-left pb-3 font-bold font-16">
+              Edit golink
+            </section>
+            <section class="flex w-full items-end">
+              <section class="flex-1">
+                <label for="name" class="mb-2 font-medium">Name</label>
+                <section class="flex mt-2 items-center">
+                  <label for="name" class="label-attached text-gray-300">go/</label>
+                  <input placeholder="shortlink" class="input-attached" type="text" name="name" id="name" disabled />
+                </section>
+              </section>
+              <section class="flex items-center pl-2 pr-2 text-gray-300 h-36">&#8594;</section>
+              <section class="flex-2">
+                <label class="font-medium" for="url">URL</label>
+                <input class="mt-2" placeholder="https://example.com/some-url" type="text" name="url" id="url" autofocus />
+              </section>
+            </section>
+            <section class="nowrap text-right pt-3">
+              <a href="/pages/index.html" class="text-black mr-3">Cancel</a>
+              <input type="submit" value="Save" class="button" />
+            <section>
+          </section>
+        </form>
+      </section>
+    </section>
+  </body>
+</html>
