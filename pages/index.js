@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const tableFooter = document.querySelector('.golink-table--footer');
+        tableFooter.innerHTML = '';
         const golinkCount = document.createElement('span');
         golinkCount.textContent = `${currentGolinkCount} golinks.`;
         golinkCount.classList = 'mr-1';
