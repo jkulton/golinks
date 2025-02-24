@@ -2,9 +2,9 @@
 
 # golinks
 
-[golinks](https://golinks.github.io/golinks/) in your Chrome-based browser, without the need to modify DNS settings or run a server.
+golinks in your browser, without the need to modify DNS settings or run a server.
 
-This is an unpacked Chrome extension which leverages the [`declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest) API handle redirecting golinks to actual URLs.
+This is an unpacked Chrome extension which leverages Chrome's [`declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest) to function as an all-in-one golinks system for personal, single-person use.
 
 ## Installation
 
@@ -16,3 +16,7 @@ This is an unpacked Chrome extension which leverages the [`declarativeNetRequest
 ## Usage
 
 See [WELCOME.md](./WELCOME.md)
+
+## "What are golinks?"
+
+See https://golinks.github.io/golinks/
