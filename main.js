@@ -63,8 +63,6 @@ const reloadGolinkRules = async () => {
   chrome.declarativeNetRequest.updateSessionRules(options);
 };
 
-const main = async () => await reloadGolinkRules();
-
 chrome.storage.onChanged.addListener(() => reloadGolinkRules());
 chrome.runtime.onStartup.addListener(() => reloadGolinkRules());
 
@@ -76,5 +74,3 @@ chrome.runtime.onInstalled.addListener(async () => {
   await chrome.storage.local.set({ golinks: { "help": WELCOME_DOC } });
   await chrome.tabs.update({ url: WELCOME_DOC });
 });
-
-main().catch(console.error);
