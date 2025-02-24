@@ -2,11 +2,11 @@
 
 You just installed the golinks extension!
 
-Type `go/` into your Chrome address bar and press Enter to visit the extension's homepage. This page lists all your golinks. (You can also visit this page by pinning the extension, then click the icon and selecting **Options**)
-
-Use a golink by typing `go/NAME` into your address bar and then pressing Enter to navigate.
+Type `go/` into your Chrome address bar and press Enter to visit the extension's homepage. This page lists all your golinks. (You can also visit this page by pinning the extension, then clicking the extension's icon and selecting **Options**)
 
 One golink comes preinstalled: [go/help](http://go/help). It leads to this doc!
+
+Use a golink by typing `go/NAME` into your address bar and then pressing Enter to navigate.
 
 ## Tips & Usage
 
