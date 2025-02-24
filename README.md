@@ -9,6 +9,8 @@ This is an unpacked Chrome extension which leverages Chrome's [`declarativeNetRe
 > [!IMPORTANT]  
 > All golink data is stored **locally** using Chrome's [`storage.local`](https://developer.chrome.com/docs/extensions/reference/api/storage#storage_areas)
 
+For more information about what golinks _are_, see [this page](https://golinks.github.io/golinks/).
+
 ### Installation
 
 1. Clone this repo
