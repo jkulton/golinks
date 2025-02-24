@@ -6,7 +6,8 @@ golinks in your browser, without the need to modify DNS settings or run a server
 
 This is an unpacked Chrome extension which leverages Chrome's [`declarativeNetRequest`](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest) to function as an all-in-one golinks system for personal use.
 
-⚠️ All golink data is stored **locally** using Chrome's [`storage.local`](https://developer.chrome.com/docs/extensions/reference/api/storage#storage_areas), but you still shouldn't put anything sensitive into a golink's name
+> [!IMPORTANT]  
+> All golink data is stored **locally** using Chrome's [`storage.local`](https://developer.chrome.com/docs/extensions/reference/api/storage#storage_areas)
 
 ### Installation
 
