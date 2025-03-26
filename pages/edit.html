@@ -7,15 +7,16 @@
     <script src="./edit.js"></script>
   </head>
   <body>
-    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
-      <section class="flex items-center mb-3 w-full">
-        <a href="/pages/index.html" class="flex items-center decoration-none">
-          <img src="../images/icon.svg" width="36"/>
-          <h1 class="font-black text-black ml-2 mr-2 font-19">golinks</h1>
+    <section class="w-full flex items-center justify-center pt-3 pb-3 bg-white bb b-stone-200">
+      <section class="flex items-center ml-auto mr-auto w-full site-wrapper pl-3 pr-3">
+        <a href="/pages/index.html" class="flex items-center decoration-none hover-underline">
+          <img src="../images/icon.svg" width="28"/>
+          <h1 class="font-bold text-black m-0 ml-2 mr-2 font-16">golinks</h1>
         </a>
-        <p class="text-gray-200">/ edit</p>
+        <p class="m-0 text-stone-500">/ edit</p>
       </section>
-      <hr />
+    </section>
+    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
       <section class="w-full flex flex-center">
         <form id="create-edit" class="w-full">
           <section class="w-full">
@@ -26,11 +27,11 @@
               <section class="flex-1">
                 <label for="name" class="mb-2 font-medium">Name</label>
                 <section class="flex mt-2 items-center">
-                  <label for="name" class="label-attached text-gray-300">go/</label>
+                  <label for="name" class="label-attached text-stone-500">go/</label>
                   <input placeholder="shortlink" class="input-attached" type="text" name="name" id="name" disabled />
                 </section>
               </section>
-              <section class="flex items-center pl-2 pr-2 text-gray-300 h-36">&#8594;</section>
+              <section class="flex items-center pl-2 pr-2 text-stone-500 h-40">&#8594;</section>
               <section class="flex-2">
                 <label class="font-medium" for="url">URL</label>
                 <input class="mt-2" placeholder="https://example.com/some-url" type="text" name="url" id="url" autofocus />
@@ -38,7 +39,7 @@
             </section>
             <section class="nowrap text-right pt-3">
               <a href="/pages/index.html" class="text-black mr-3">Cancel</a>
-              <input type="submit" value="Save" class="button h-36" />
+              <input type="submit" value="Save" class="button button-primary" />
             <section>
           </section>
         </form>
