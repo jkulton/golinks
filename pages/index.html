@@ -8,17 +8,18 @@
     <script src="./index.js"></script>
   </head>
   <body>
-    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
-      <section class="flex items-center mb-3 w-full">
+    <section class="w-full flex items-center justify-center pt-3 pb-3 bg-white bb b-stone-200">
+      <section class="flex items-center ml-auto mr-auto w-full site-wrapper pl-3 pr-3">
         <a href="/pages/index.html" class="flex items-center decoration-none">
-          <img src="../images/icon.svg" width="36"/>
-          <h1 class="font-black text-black ml-2 mr-2 font-19">golinks</h1>
+          <img src="../images/icon.svg" width="28"/>
+          <h1 class="font-bold text-black m-0 ml-2 mr-2 font-16">golinks</h1>
         </a>
-        <p class="text-gray-200">/ manage</p>
+        <p class="m-0 text-stone-500">/ manage</p>
       </section>
-      <hr />
+    </section>
+    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
       <section class="flex w-full mb-3">
-        <a href="/pages/create.html" class="button">Create</a>
+        <a href="/pages/create.html" class="button button-primary">Create</a>
         <section class="ml-auto">
           <a href="/pages/import.html" class="button ml-1 mr-1">Import</a>
           or
@@ -28,14 +29,19 @@
       </section>
       <table class="golink-table w-full">
         <tr>
-          <th class="font-normal text-gray-200">Name</th>
-          <th class="font-normal text-gray-200">URL</th>
-          <th class="font-normal text-gray-200">Actions</th>
+          <th>Name</th>
+          <th>URL</th>
+          <th>Actions</th>
         </tr>
         <tbody></tbody>
       </table>
-      <section class="golink-table--footer flex items-center mt-3 pl-3 pr-3 w-full"></section>
+      <section class="golink-table--footer flex justify-center items-center mt-3 pl-3 pr-3 w-full"></section>
     </section>
-    <div class="site-footer mt-4 mb-4 text-center"></div>
+    <div class="mt-4 text-center">
+      <a href="https://github.com/jkulton/golinks" class="text-stone-500 hover-underline">
+        <img src="../images/icon.svg" width="26"/>
+      </a>
+    </div>
+    <div class="site-footer text-center mb-3"></div>
   </body>
 </html>

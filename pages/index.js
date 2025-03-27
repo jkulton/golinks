@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const siteFooter = document.querySelector('.site-footer');
     
     async function rerenderTable() {
-        const rows = table.querySelectorAll('.golink-row');
-        rows.forEach(row => row.remove());
+        table.querySelectorAll('.golink-row').forEach(row => row.remove());
 
         const { golinks } = await chrome.storage.local.get("golinks");
 
@@ -85,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         footerLink.href = homepage_url;
         footerLink.target = '_blank';
         footerLink.textContent = `${name} v${version}`;
+        footerLink.className = 'decoration-none hover-underline';
         siteFooter.appendChild(footerLink);
     }
 
