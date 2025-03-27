@@ -105,6 +105,10 @@ hr {
   width: 100%;
 }
 
+a:hover {
+  background: var(--stone-100);
+}
+
 .site-wrapper { max-width: 1000px; }
 
 .label-attached {
