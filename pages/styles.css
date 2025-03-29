@@ -164,6 +164,7 @@ input.input-attached {
 .nowrap { white-space: nowrap; }
 .word-break-all { word-break: break-all; }
 
+.font-12 { font-size: 12px; }
 .font-16 { font-size: 16px; }
 
 .decoration-none { text-decoration: none; }
@@ -173,6 +174,9 @@ input.input-attached {
 
 .w-full { width: 100%; }
 .h-40 { height: 40px; }
+
+.o-50 { opacity: .5; }
+.hover-o-100:hover { opacity: 1; }
 
 .flex { display: flex; }
 .flex-center  { justify-content:center; align-items:center; }
@@ -186,6 +190,7 @@ input.input-attached {
 .font-bold { font-weight: 700; }
 
 .text-black { color: var(--black); }
+.text-stone-400 { color: var(--stone-400); }
 .text-stone-500 { color: var(--stone-500); }
 
 .bg-white { background-color: var(--white); }

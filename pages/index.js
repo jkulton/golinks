@@ -79,12 +79,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function renderSiteFooter() {
-        const { name, version, homepage_url } = chrome.runtime.getManifest();
+        const { version, homepage_url } = chrome.runtime.getManifest();
         const footerLink = document.createElement('a');
         footerLink.href = homepage_url;
         footerLink.target = '_blank';
-        footerLink.textContent = `${name} v${version}`;
-        footerLink.className = 'decoration-none hover-underline';
+        footerLink.textContent = `v${version}`;
+        footerLink.className = 'decoration-none text-stone-400 font-12';
         siteFooter.appendChild(footerLink);
     }
 
