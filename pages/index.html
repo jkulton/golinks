@@ -8,26 +8,25 @@
     <script src="./index.js"></script>
   </head>
   <body>
-    <section class="w-full flex items-center justify-center pt-3 pb-3 bg-white bb b-stone-200">
-      <section class="flex items-center ml-auto mr-auto w-full site-wrapper pl-3 pr-3">
-        <a href="/pages/index.html" class="flex items-center decoration-none">
+    <section class="container">
+      <section class="logo-wrapper">
+        <a href="/pages/index.html">
           <img src="../images/icon.svg" width="28"/>
-          <h1 class="font-bold text-black m-0 ml-2 mr-2 font-16">golinks</h1>
+          <h1>golinks</h1>
         </a>
-        <p class="m-0 text-stone-500">/ manage</p>
       </section>
     </section>
-    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
-      <section class="flex w-full mb-3">
-        <a href="/pages/create.html" class="button button-primary">Create</a>
-        <section class="ml-auto">
-          <a href="/pages/import.html" class="button ml-1 mr-1">Import</a>
+    <section class="container">
+      <section class="golink-home--actions">
+        <a class="button" href="/pages/create.html">Create</a>
+        <section>
+          <a href="/pages/import.html">Import</a>
           or
-          <a href="/pages/export.html" class="button ml-1 mr-1">Export</a>
+          <a href="/pages/export.html">Export</a>
           as csv
         </section>
       </section>
-      <table class="golink-table w-full">
+      <table class="golink-table">
         <tr>
           <th>Name</th>
           <th>URL</th>
@@ -35,13 +34,11 @@
         </tr>
         <tbody></tbody>
       </table>
-      <section class="golink-table--footer flex justify-center items-center mt-3 pl-3 pr-3 w-full"></section>
+      <br/>
+      <section class="golink-table--footer"></section>
+      <br/>
     </section>
-    <div class="mt-4 mb-3 flex flex-center flex-column hover-underline o-50 hover-o-100">
-      <a href="https://github.com/jkulton/golinks" class="text-stone-500">
-        <img src="../images/icon.svg" width="16" height="16"/>
-      </a>
-      <div class="site-footer text-stone-500"></div>
-    </div>
+    <div class="site-footer"></div>
+    <br/>
   </body>
 </html>

@@ -30,13 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
     async function initForm() {
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get('name');
-
         if (!name) {
             return;
         }
-
         nameInput.value = name;
-
         const { golinks } = await chrome.storage.local.get("golinks");
         if (golinks[name]) {
             urlInput.value = golinks[name];
