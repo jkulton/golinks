@@ -21,6 +21,8 @@
   --4: calc(var(--spacing) * 4);
   --5: calc(var(--spacing) * 5);
   --6: calc(var(--spacing) * 6);
+  --7: calc(var(--spacing) * 7);
+  --8: calc(var(--spacing) * 8);
 }
 
 *, *::before, *::after {
@@ -135,7 +137,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: var(--6) 0 var(--4) 0;;
+  margin: var(--8) 0 var(--4) 0;;
   border-bottom: 1px solid var(--stone-200);
   padding-bottom: var(--4);
 
@@ -148,6 +150,12 @@ a:hover {
   h1, p {
     margin: 0 var(--1);
     font-size: 1.25rem;
+  }
+
+  img {
+    width: 32px;
+    border-radius: var(--1);
+    border: 1px solid var(--stone-200);
   }
 }
 

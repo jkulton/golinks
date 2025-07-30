@@ -49,17 +49,15 @@ const getDefaultRules = () => {
 
 const reloadGolinkRules = async () => {
   const defaultRules = getDefaultRules();
-  const { golinks } = await chrome.storage.local.get("golinks");
-  const golinkRules = Object.entries(golinks || {}).map(golinkToRule);
-  const addRules = [...defaultRules, ...golinkRules];
-  const options = { addRules };
+  const { golinks } = await chrome.storage.local.get("golinks") || {};
+  const golinkRules = Object.entries(golinks).map(golinkToRule);
+  const options = { addRules: [...defaultRules, ...golinkRules] };
   // Chrome docs suggests removing all rules before adding new ones
   const registeredRules = await chrome.declarativeNetRequest.getSessionRules()
   const removeRuleIds = registeredRules.map(rule => rule.id);
   if (registeredRules.length > 0) {
     options.removeRuleIds = removeRuleIds;
   }
-  
   chrome.declarativeNetRequest.updateSessionRules(options);
 };
 
