@@ -271,7 +271,7 @@ input.input-attached {
     color: var(--stone-600);
     background: var(--stone-100);
     border: 1px solid var(--stone-200);
-    padding: var(--4) var(--1);
+    padding: var(--4) var(--5);
     border-radius: var(--2);
     font-family: monospace;
     overflow-x: auto;
