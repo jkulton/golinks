@@ -1,6 +1,7 @@
 // This extension heavily leverages the declarativeNetRequest API for golink redirection
 // Docs https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest
-const WELCOME_DOC = "https://github.com/jkulton/golinks/blob/main/WELCOME.md";
+
+const GOLINKS_TEMPLATE = { "gh": "https://github.com" };
 
 const golinkToRule = ([key, value], index) => ({
   id: index + 3,
@@ -49,17 +50,15 @@ const getDefaultRules = () => {
 
 const reloadGolinkRules = async () => {
   const defaultRules = getDefaultRules();
-  const { golinks } = await chrome.storage.local.get("golinks");
-  const golinkRules = Object.entries(golinks || {}).map(golinkToRule);
-  const addRules = [...defaultRules, ...golinkRules];
-  const options = { addRules };
+  const { golinks } = await chrome.storage.local.get("golinks") || {};
+  const golinkRules = Object.entries(golinks).map(golinkToRule);
+  const options = { addRules: [...defaultRules, ...golinkRules] };
   // Chrome docs suggests removing all rules before adding new ones
   const registeredRules = await chrome.declarativeNetRequest.getSessionRules()
   const removeRuleIds = registeredRules.map(rule => rule.id);
   if (registeredRules.length > 0) {
     options.removeRuleIds = removeRuleIds;
   }
-  
   chrome.declarativeNetRequest.updateSessionRules(options);
 };
 
@@ -71,6 +70,6 @@ chrome.runtime.onInstalled.addListener(async () => {
   if (golinks) {
     return;
   }
-  await chrome.storage.local.set({ golinks: { "help": WELCOME_DOC } });
-  await chrome.tabs.update({ url: WELCOME_DOC });
+  await chrome.storage.local.set({ golinks: GOLINKS_TEMPLATE });
+  await chrome.tabs.update({ url: '/pages/help.html' });
 });

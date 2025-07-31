@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         e.target.disabled = true;
         const formData = new FormData(form);
-        const url = formData.get('url');
+        const url = __helpers.defaultToHTTPS(formData.get('url'));
         // Lightweight validation
-        if (!URL.parse(url)) {
+        if (!__helpers.isValidURL(url)) {
             alert('Invalid URL. Protocol required (http:// or https://)');
             return;
         }

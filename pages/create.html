@@ -5,40 +5,38 @@
     <link rel="stylesheet" href="./styles.css" />
     <meta name="viewport" content="width=device-width">
     <script src="./create.js"></script>
+    <script src="../helpers/helpers.js"></script>
   </head>
   <body>
-    <section class="w-full flex items-center justify-center pt-3 pb-3 bg-white bb b-stone-200">
-        <section class="flex items-center ml-auto mr-auto w-full site-wrapper pl-3 pr-3">
-          <a href="/pages/index.html" class="flex items-center decoration-none">
-            <img src="../images/icon.svg" width="28"/>
-            <h1 class="font-bold text-black m-0 ml-2 mr-2 font-16">golinks</h1>
-          </a>
-          <p class="m-0 text-stone-500">/ create</p>
-        </section>
+    <section class="container">
+      <section class="logo-wrapper">
+        <a href="/pages/index.html">
+          <img src="../images/icon.svg" width="28"/>
+          <h1>golinks</h1>
+        </a>
+        <p>/ create</p>
       </section>
-    <section class="site-wrapper flex flex-column items-center w-full pt-3 pr-3 pb-3 pl-3">
-        <form id="create-edit" class="w-full flex flex-center">
-            <section class="w-full">
-                <section class="text-left pb-3 font-bold font-16">Create golink</section>
-                <section class="flex w-full items-end">
-                    <section class="flex-1">
-                        <label for="name" class="mb-2 font-medium">Name</label>
-                        <section class="flex mt-2 items-center">
-                            <label for="name" class="label-attached text-stone-500">go/</label>
-                            <input placeholder="shortlink" class="input-attached" type="text" name="name" id="name" autofocus />
-                        </section>
-                    </section>
-                    <section class="flex items-center pl-2 pr-2 text-stone-500 h-40">&#8594;</section>
-                    <section class="flex-2">
-                        <label class="font-medium" for="url">URL</label>
-                        <input class="mt-2" placeholder="https://example.com/some-url" type="text" name="url" id="url" />
-                    </section>
-                </section>
-                <section class="nowrap text-right pt-3">
-                    <input type="submit" value="Create" class="button button-primary" />
-                </section>
+    </section>
+    <section class="container">
+      <form id="create-edit">
+        <section class="inline-form">
+          <section class="inline-form-section">
+            <label for="name">Name</label>
+            <section class="label-attached-wrapper">
+              <span for="name" class="label-attached">go/</span>
+              <input placeholder="shortlink" class="input-attached" type="text" name="name" id="name" autofocus />
             </section>
-        </form>
+          </section>
+          <section class="inline-form-divider">&#8594;</section>
+          <section class="inline-form-section inline-form-section--2">
+              <label for="url">URL</label>
+              <input placeholder="https://example.com/some-url" type="text" name="url" id="url" />
+          </section>
+        </section>
+        <section class="form-footer">
+          <input type="submit" value="Create" class="button" />
+        </section>
+      </form>
     </section>
   </body>
 </html>

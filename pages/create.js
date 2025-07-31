@@ -7,15 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         e.target.disabled = true;
         const formData = new FormData(form);
-        // Name may only contain alphanumerics or slashes and cannot be empty
-        const name = formData.get('name').trim().replace(/[^a-zA-Z0-9/]/g, '');
-        if (name.length === 0) {
-            alert('Name cannot be empty');
+        const name = __helpers.sanitizeGolinkName(formData.get('name'));
+        if (!__helpers.isValidGolinkName(name)) {
+            alert('Name cannot be empty and may only contain alphanumerics or slashes');
             return;
         }
-        const url = formData.get('url');
+        const url = __helpers.defaultToHTTPS(formData.get('url'));
         // Lightweight validation
-        if (!URL.parse(url)) {
+        if (!__helpers.isValidURL(url)) {
             alert('Invalid URL. Protocol required (http:// or https://)');
             return;
         }
@@ -30,13 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
     async function initForm() {
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get('name');
-
         if (!name) {
             return;
         }
-
-        nameInput.value = name;
-
+        nameInput.value = name.toLowerCase();
         const { golinks } = await chrome.storage.local.get("golinks");
         if (golinks[name]) {
             urlInput.value = golinks[name];
