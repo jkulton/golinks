@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!name) {
             return;
         }
-        nameInput.value = name;
+        nameInput.value = name.toLowerCase();
         const { golinks } = await chrome.storage.local.get("golinks");
         if (golinks[name]) {
             urlInput.value = golinks[name];

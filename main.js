@@ -1,6 +1,7 @@
 // This extension heavily leverages the declarativeNetRequest API for golink redirection
 // Docs https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest
-const WELCOME_DOC = "https://github.com/jkulton/golinks/blob/main/WELCOME.md";
+
+const GOLINKS_TEMPLATE = { "gh": "https://github.com" };
 
 const golinkToRule = ([key, value], index) => ({
   id: index + 3,
@@ -69,6 +70,6 @@ chrome.runtime.onInstalled.addListener(async () => {
   if (golinks) {
     return;
   }
-  await chrome.storage.local.set({ golinks: { "help": WELCOME_DOC } });
-  await chrome.tabs.update({ url: WELCOME_DOC });
+  await chrome.storage.local.set({ golinks: GOLINKS_TEMPLATE });
+  await chrome.tabs.update({ url: '/pages/help.html' });
 });

@@ -154,8 +154,6 @@ a:hover {
 
   img {
     width: 32px;
-    border-radius: var(--1);
-    border: 1px solid var(--stone-200);
   }
 }
 
@@ -239,5 +237,43 @@ input.input-attached {
   cursor: pointer;
   &:hover {
     background-color: var(--stone-50);
+  }
+}
+
+.site-footer, .site-footer a {
+  color: var(--stone-400)
+}
+
+.content {
+  background: var(--white);
+  padding: var(--8) var(--8);
+  border-radius: var(--2);
+  border: 1px solid var(--stone-200);
+  margin-bottom: var(--8);
+
+  h1, h2 {
+    margin: 0 0 var(--3) 0;
+  }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem;  }
+  hr { margin: var(--6) 0; }
+  p { line-height: 1.5; }
+
+  code {
+    background: var(--stone-100);
+    padding: var(--1) var(--2);
+    border-radius: var(--2);
+    font-family: monospace;
+    font-size: .9rem
+  }
+
+  pre {
+    color: var(--stone-600);
+    background: var(--stone-100);
+    border: 1px solid var(--stone-200);
+    padding: var(--4) var(--1);
+    border-radius: var(--2);
+    font-family: monospace;
+    overflow-x: auto;
   }
 }

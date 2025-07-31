@@ -15,10 +15,10 @@ if (window.__helpers === undefined) {
             return url;
         },
         isValidGolinkName: function(name) {
-            return name.trim().replace(/[^a-zA-Z0-9/]/g, '').length > 0;
+            return name.trim().replace(/[^a-zA-Z0-9/]/g, '').toLowerCase().length > 0;
         },
         sanitizeGolinkName: function(name) {
-            return name.trim().replace(/[^a-zA-Z0-9/]/g, '');
+            return name.trim().replace(/[^a-zA-Z0-9/]/g, '').toLowerCase();
         },
     };
 }

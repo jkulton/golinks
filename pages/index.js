@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const tableFooter = document.querySelector('.golink-table--footer');
         tableFooter.innerHTML = '';
         const golinkCount = document.createElement('span');
-        golinkCount.textContent = `${currentGolinkCount} golinks. `;
+        golinkCount.textContent = `${currentGolinkCount} golink${currentGolinkCount > 1 ? 's' : ''}. `;
         tableFooter.appendChild(golinkCount);
 
         const deleteAllLink = document.createElement('a');
         deleteAllLink.addEventListener('click', async (event) => {
             event.target.disabled = true;
-            const confirmation = `delete ${currentGolinkCount} golinks`;
+            const confirmation = `delete ${currentGolinkCount} golink${currentGolinkCount > 1 ? 's' : ''}`;
             const answer = prompt(`Are you sure? Type '${confirmation}' to confirm.`);
             if (answer.toLocaleLowerCase() !== confirmation.toLocaleLowerCase()) {
                 return;
@@ -82,11 +82,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function renderSiteFooter() {
         const { version, homepage_url } = chrome.runtime.getManifest();
-        const footerLink = document.createElement('a');
-        footerLink.href = homepage_url;
-        footerLink.target = '_blank';
-        footerLink.textContent = `v${version}`;
-        siteFooter.appendChild(footerLink);
+        const footerRepoLink = document.createElement('a');
+        footerRepoLink.href = homepage_url;
+        footerRepoLink.target = '_blank';
+        footerRepoLink.textContent = `v${version}`;
+        siteFooter.appendChild(footerRepoLink);
+
+        const footerHelpText = document.createElement('span');
+        footerHelpText.textContent = ' | ';
+        siteFooter.appendChild(footerHelpText);
+
+        const footerHelpLink = document.createElement('a');
+        footerHelpLink.href = '/pages/help.html';
+        footerHelpLink.textContent = 'Help';
+        siteFooter.appendChild(footerHelpLink);
     }
 
     rerenderTable();
